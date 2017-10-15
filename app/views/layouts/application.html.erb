@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <% flash.each do |message_type, message| %>
+      <strong><%= message_type %></strong>
+      <br>
+      <%= message %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
